@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="HW_1_07_09.UI.Menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HW_1_07_09.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Button Content="ColorButton" HorizontalAlignment="Left" Margin="84,190,0,0" VerticalAlignment="Top" Width="236" Height="73" Click="Button_Click" Name="color_btn"/>
+        <Button Content="Calc" HorizontalAlignment="Left" Margin="487,190,0,0" VerticalAlignment="Top" Width="236" Height="73" Click="Button_Click_1" Name="calc_btn" RenderTransformOrigin="0.489,-1.201"/>
+
+    </Grid>
+</UserControl>
