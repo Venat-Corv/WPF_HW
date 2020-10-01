@@ -1,0 +1,147 @@
+﻿<Window x:Class="HW_4_10_09.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW_4_10_09.UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="MGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="MSGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="10,0,0,0"
+                        Text="Alpha:"
+                        FontSize="16"/>
+                    <TextBlock 
+                        x:Name="Alpha_tbl"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="75,0,0,0"
+                        Text="0"
+                        FontSize="16"/>
+                    <Slider 
+                        x:Name="Alpha_sl"
+                        HorizontalAlignment="Left" 
+                        Width="550"
+                        Margin="120,0,0,0" 
+                        VerticalAlignment="Center"
+                        Minimum="0"
+                        Maximum="255"
+                        ValueChanged="Slider_ValueChanged"/>
+
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="10,0,0,0"
+                        Text="Red:"
+                        FontSize="16"/>
+                    <TextBlock 
+                        x:Name="Red_tbl"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="75,0,0,0"
+                        Text="0"
+                        FontSize="16"/>
+                    <Slider 
+                        x:Name="Red_sl"
+                        HorizontalAlignment="Left" 
+                        Width="550"
+                        Margin="120,0,0,0" 
+                        VerticalAlignment="Center"
+                        Minimum="0"
+                        Maximum="255"
+                        ValueChanged="Slider_ValueChanged"/>
+
+                </Grid>
+                <Grid Grid.Row="2">
+                    <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="10,0,0,0"
+                        Text="Green:"
+                        FontSize="16"/>
+                    <TextBlock 
+                        x:Name="Green_tbl"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="75,0,0,0"
+                        Text="0"
+                        FontSize="16"/>
+                    <Slider 
+                        x:Name="Green_sl"
+                        HorizontalAlignment="Left" 
+                        Width="550"
+                        Margin="120,0,0,0" 
+                        VerticalAlignment="Center"
+                        Minimum="0"
+                        Maximum="255"
+                        ValueChanged="Slider_ValueChanged"/>
+
+                </Grid>
+                <Grid Grid.Row="3">
+                    <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="10,0,0,0"
+                        Text="Blue:"
+                        FontSize="16"/>
+                    <TextBlock 
+                        x:Name="Blue_tbl"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="75,0,0,0"
+                        Text="0"
+                        FontSize="16"/>
+                    <Slider 
+                        x:Name="Blue_sl"
+                        HorizontalAlignment="Left" 
+                        Width="550"
+                        Margin="120,0,0,0" 
+                        VerticalAlignment="Center"
+                        Minimum="0"
+                        Maximum="255"
+                        ValueChanged="Slider_ValueChanged"/>
+
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Button 
+                        x:Name="Add_btn"
+                        Content="Add"
+                        FontSize="22"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Click="Add_btn_Click"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Border x:Name="color_br" Margin="4"/>
+            </Grid>
+        </Grid>
+        <Grid x:Name="SGrid" Grid.Row="1">
+            <ScrollViewer>
+                <StackPanel x:Name="MSPanel"/>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

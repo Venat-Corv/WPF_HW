@@ -1,0 +1,36 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW_3_09_09"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="HW_3_09_09.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,672,383">
+        <ComboBox x:Name="cmbColors" Margin="658,0,-671,3">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="Color" HorizontalAlignment="Left" Height="27" Margin="592,6,-514,0" VerticalAlignment="Top" Width="42"/>
+        <Label x:Name="bold"  Content="Bold" HorizontalAlignment="Left" Margin="10,6,0,-2" Width="43" FontWeight="Bold" MouseEnter="bold_MouseEnter" MouseDown="bold_MouseDown"/>
+        <Label x:Name="italic" Content="Italic" HorizontalAlignment="Left" Height="27" Margin="67,6,0,0" VerticalAlignment="Top" Width="43" FontStyle="Italic" MouseEnter="italic_MouseEnter" MouseDown="italic_MouseDown"/>
+        <Label x:Name="under" Content="Underline" HorizontalAlignment="Left" Height="27" Margin="136,6,-77,0" VerticalAlignment="Top" Width="61" MouseEnter="under_MouseEnter" MouseDown="under_MouseDown"/>
+        <Label x:Name="clear"  Content="Clear" HorizontalAlignment="Left" Height="27" Margin="227,6,-150,0" VerticalAlignment="Top" Width="43" MouseEnter="clear_MouseEnter" MouseDown="clear_MouseDown"/>
+        <Label Content="Font Size" HorizontalAlignment="Left" Height="27" Margin="372,6,-313,0" VerticalAlignment="Top" Width="61"/>
+        <ComboBox  x:Name="cmbSize" Height="27" Margin="438,6,-451,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="133">
+        </ComboBox>
+        <Label Content="Start" HorizontalAlignment="Left" Height="29" Margin="10,38,0,-31" VerticalAlignment="Top" Width="42"/>
+        <Label Content="End" HorizontalAlignment="Left" Height="29" Margin="155,38,-77,-31" VerticalAlignment="Top" Width="42"/>
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="52,38,0,-31" TextWrapping="Wrap" VerticalAlignment="Top" Width="43"/>
+        <TextBox HorizontalAlignment="Left" Margin="197,38,-125,-31" TextWrapping="Wrap" Width="48" Height="29" VerticalAlignment="Top"/>
+        <TextBox x:Name="main_tb" HorizontalAlignment="Left" Height="347" Margin="10,72,-671,-383" TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." VerticalAlignment="Top" Width="781" FontSize="24"/>
+
+    </Grid>
+</Window>
